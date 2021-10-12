@@ -9,7 +9,7 @@ module.exports = () => {
 
   return {
     mode: 'development',
-    target: 'node',
+    target: 'web',
     context: __dirname,
     entry: {
       mailgun: path.resolve(__dirname, './index.ts'),
@@ -34,7 +34,6 @@ module.exports = () => {
               loader: 'ts-loader?configFile=tsconfig.webpack.json',
             }
           ],
-          exclude: /(node_modules|test)/
         }
       ]
     },
